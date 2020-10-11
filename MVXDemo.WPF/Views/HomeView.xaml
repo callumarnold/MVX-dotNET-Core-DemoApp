@@ -10,9 +10,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -22,8 +19,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0" FontSize="50"/>
-        <TextBox  Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" FontSize="50" MinWidth="500"/>
-        <TextBlock Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="50"/>
+        <TextBlock Text="Name:" Grid.Row="1" Grid.Column="0" FontSize="50"/>
+        <TextBlock Text="{Binding DisplayName}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="50"/>
+        <TextBox  Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" FontSize="50" MinWidth="500"/>
+
+
+        <Button x:Name="Enter" FontSize="40" Grid.Row="2" Margin="0 20">Enter</Button>
+
+
     </Grid>
 </views:MvxWpfView>

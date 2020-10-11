@@ -15,12 +15,15 @@ namespace MVXDemo.Core.ViewModels
             set {
                 SetProperty(ref _name, value);
                 RaisePropertyChanged(() => Name);
-                    
-            
+                RaisePropertyChanged(() => DisplayName);
+
+
             }
         }
 
+        
 
+        public string DisplayName => $"Your name is {Name}";
 
     }
 }
